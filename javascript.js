@@ -35,15 +35,15 @@ function onclickdiv(target){
 
     })
     document.getElementById("resetButton").addEventListener("click", function() {
-        // Reset selected items
-        const selectedItemContainer = document.getElementById("selected-Items");
-        selectedItemContainer.innerHTML = "";
-    
-        // Reset displayed values to default text
-        document.getElementById("total-price").innerText = "0.00";
-        document.getElementById("discount").innerText = "0.00";
-        document.getElementById("final-total").innerText = "0.00";
-    })  
+    // Reset selected items
+    const selectedItemContainer = document.getElementById("selected-Items");
+    selectedItemContainer.innerHTML = "";
+
+    // Reset displayed values to default text
+    document.getElementById("total-price").innerText = "0.00";
+    document.getElementById("discount").innerText = "0.00";
+    document.getElementById("final-total").innerText = "0.00";
+})  
 
 }
 
