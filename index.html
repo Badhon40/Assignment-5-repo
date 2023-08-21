@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
+    <link rel="shortcut icon" href="/images/summer-1.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,8 +31,8 @@
          <section class=" mt-10">
             <h2 class="text-3xl">Kitchenware</h2>
             <!-- utilities -->
-            <div onclick="onclickdiv()" class="grid lg:grid-cols-3 gap-5 mt-4">
-                <div class="card h-80 bg-base-100 shadow-xl">
+            <div  class="grid lg:grid-cols-3 gap-5 mt-4">
+                <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod1.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -48,7 +49,7 @@
                       
                     </div>
                   </div>
-                  <div class="card h-80 bg-base-100 shadow-xl">
+                  <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod3.png" alt="Shoes" class="rounded-xl " />
                     </figure>
@@ -65,7 +66,7 @@
                       
                     </div>
                   </div>
-                <div class="card h-80 bg-base-100 shadow-xl ">
+                <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl ">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod2.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -92,7 +93,7 @@
             <h2 class="text-3xl">Sportswear</h2>
             <!-- utilities -->
             <div class="grid lg:grid-cols-3 gap-5 mt-4">
-                  <div class="card h-80 bg-base-100 shadow-xl">
+                  <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod5.png" alt="Shoes" class="rounded-xl " />
                     </figure>
@@ -105,11 +106,10 @@
                             <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                           </div>
                       <h2 class="card-title">Full Jersey Set</h2>
-                      <h4>98.00 TK</h4>
-                      
-                    </div>
+                      <h4><span>98.00</span> TK</h4>
+                      </div>
                   </div>
-                <div class="card h-80 bg-base-100 shadow-xl ">
+                <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl ">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -126,7 +126,7 @@
                       
                     </div>
                   </div>
-                  <div class="card h-80 bg-base-100 shadow-xl">
+                  <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod4.png" alt="Shoes" class="rounded-xl " />
                     </figure>
@@ -152,8 +152,8 @@
         <section class=" mt-10">
             <h2 class="text-3xl">Kitchenware</h2>
             <!-- utilities -->
-            <div class="grid lg:grid-cols-3 gap-5 mt-4">
-                <div class="card h-80 bg-base-100 shadow-xl">
+            <div  class="grid lg:grid-cols-3 gap-5 mt-4">
+                <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod7.png" alt="Shoes" class="rounded-xl " />
                     </figure>
@@ -170,7 +170,7 @@
                       
                     </div>
                   </div>
-                  <div class="card h-80 bg-base-100 shadow-xl">
+                  <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod8.png" alt="Shoes" class="rounded-xl " />
                     </figure>
@@ -187,7 +187,7 @@
                       
                     </div>
                   </div>
-                <div class="card h-80 bg-base-100 shadow-xl ">
+                <div onclick="onclickdiv(this)" class="card h-80 bg-base-100 shadow-xl ">
                     <figure class="px-10 h-60 bg-pink-100">
                       <img src="/images/prod9.png" alt="Shoes" class="rounded-xl" />
                     </figure>
@@ -215,21 +215,38 @@
             <div class="card-body">
               <h2 class="card-title">Have Coupon?</h2>
               <div class="card-actions">
-                <input type="text" placeholder="Coupon Code" class="bg-pink-100 w-40 py-2 rounded px-3">
-                <button class="bg-pink-500 text-white   px-5 py-2 rounded-xl">Apply</button>
+                <input id="totalCostInput" type="text" placeholder="Coupon Code" class="bg-pink-100 w-40 py-2 rounded px-3">
+                <button onclick="onclickbtn()" id="couponButton"  class="bg-pink-500 text-white   px-5 py-2 rounded-xl">Apply</button>
               </div>
             </div>
           </div>
-          <div class="w-80 h-96 rounded-xl shadow-xl text-center">
-            <p class="mt-10">
+          <div id="buys" class="w-80 h-96 rounded-xl shadow-xl ">
+            <p  class="mt-20">
+                <div id="selected-Items" class="selected-Item pl-10">
 
+                </div>
+            
+            <hr>
+            <h1  class="pl-20">Total price: <span id="total-price">00.00</span> Tk</h1>
+            <h2  class="pl-20">Discount: <span id="discount">00.00</span> TK</h2>
+            <h3  class="pl-20">Total: <span id="final-total">00.00</span> TK</h3>
+            <hr>
             </p>
-            <hr>
-            <h1>Total price: <span>00.00</span> Tk</h1>
-            <h2>Discount: <span>00.00</span> TK</h2>
-            <h3>Total: <span>00.00</span> TK</h3>
-            <hr>
-            <button class="bg-pink-500 text-white mt-4 rounded px-6 py-1"> Make Purchase</button>
+            <div class="ml-20">
+                <!-- Open the modal using ID.showModal() method -->
+                <button id="purchase" class="bg-pink-500 text-white mt-4 rounded px-6 py-1 mx-auto" onclick="my_modal_5.showModal()">Make Purchase</button>
+                <dialog id="my_modal_5" class="modal modal-bottom text-center sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                    <img src="./images/congo.png" alt="" class="mx-auto">
+                    <h3 class="font-bold text-lg">Congratulation!</h3>
+                    <p class="py-4">You purchase The Product</p>
+                    <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="resetButton" class="bg-pink-500 text-white mt-4 rounded px-6 py-1 mx-auto">GO HOME</button>
+                </div>
+            </form>
+            </dialog>
+            </div>
           </div>
        </section>
     </main>
