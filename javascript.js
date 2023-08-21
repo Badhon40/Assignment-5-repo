@@ -19,12 +19,12 @@ function onclickdiv(target){
     afterShoppinPrice=parseFloat(afterShoppinPrice)+ammountPrice;
     document.getElementById("total-price").innerText=afterShoppinPrice.toFixed(2);
     document.getElementById("final-total").innerText=afterShoppinPrice.toFixed(2);
-
+    // coupon holder
     document.getElementById("couponButton").addEventListener("click",function(){
         const couponCode=document.getElementById("totalCostInput").value;
         const discount=document.getElementById("discount");
         
-        if(couponCode==="SELL20"){
+        if(couponCode==="SELL200"){
             gotDiscount=0.20;
             aftercoupon=afterShoppinPrice*gotDiscount;
         document.getElementById("discount").innerText=aftercoupon.toFixed(2);
@@ -43,6 +43,7 @@ function onclickdiv(target){
     document.getElementById("total-price").innerText = "0.00";
     document.getElementById("discount").innerText = "0.00";
     document.getElementById("final-total").innerText = "0.00";
+    document.getElementById("totalCostInput").value=' '
 })  
 
 }
